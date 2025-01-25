@@ -18,7 +18,7 @@ const posts = (await getCollection("blog")).sort(
   </head>
   <body class="min-h-screen bg-background antialiased">
     <div
-      class="absolute inset-0 bg-gradient-to-br from-primary-100 via-white to-secondary-400"
+      class="absolute inset-0 bg-linear-to-br from-primary-100 via-white to-secondary-400"
     >
     </div>
     <div
@@ -69,10 +69,10 @@ const posts = (await getCollection("blog")).sort(
               {posts[0] && (
                 <a
                   href={`/blog/${posts[0].id}/`}
-                  class="group block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                 >
                   <div class="grid md:grid-cols-2 gap-8">
-                    <div class="aspect-[16/9] relative bg-gray-100 md:aspect-auto md:h-full">
+                    <div class="aspect-16/9 relative bg-gray-100 md:aspect-auto md:h-full">
                       {posts[0].data.heroImage ? (
                         <img
                           src={posts[0].data.heroImage}
@@ -140,9 +140,9 @@ const posts = (await getCollection("blog")).sort(
                   {posts.slice(1).map((post) => (
                     <a
                       href={`/blog/${post.id}/`}
-                      class="group block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                      class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                     >
-                      <div class="aspect-[16/9] relative bg-gray-100">
+                      <div class="aspect-16/9 relative bg-gray-100">
                         {post.data.heroImage ? (
                           <img
                             src={post.data.heroImage}

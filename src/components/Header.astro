@@ -1,117 +1,124 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface NavItem {
-	name: string;
-	href: string;
+  name: string;
+  href: string;
 }
 
 const navigation: {
-	product: NavItem[];
-	company: NavItem[];
+  product: NavItem[];
+  company: NavItem[];
 } = {
-	product: [{ name: "Home", href: "/" }],
-	company: [
-		{ name: "About", href: "/about" },
-		{ name: "Blog", href: "/blog" },
-	],
+  product: [{ name: "Home", href: "/" }],
+  company: [
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
+  ],
 };
 ---
 
-<nav class="relative z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/80">
-	<div class="container">
-		<div class="flex h-16 items-center justify-between">
-			<div class="flex items-center gap-3">
-				<a href="/" class="h-10">
-					<Image
-						src="/blog/assets/logo-long.png"
-						alt="HappyPanda Logo"
-						width={2324}
-						height={484}
-						class="h-full w-auto"
-					/>
-				</a>
-			</div>
+<nav
+  class="relative z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/80"
+>
+  <div class="container">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="h-10">
+          <Image
+            src="/assets/logo-long.png"
+            alt="HappyPanda Logo"
+            width={2324}
+            height={484}
+            class="h-full w-auto max-w-[200px]"
+          />
+        </a>
+      </div>
 
-			{/* Desktop Navigation */}
-			<div class="hidden md:flex items-center gap-8">
-				{/* Product Links */}
-				{navigation.product.map((item) => (
-					<a
-						href={item.href}
-						class="text-sm text-gray-600 hover:text-gray-900"
-					>
-						{item.name}
-					</a>
-				))}
+      {/* Desktop Navigation */}
+      <div class="hidden md:flex items-center gap-8">
+        {/* Product Links */}
+        {
+          navigation.product.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm text-gray-600 hover:text-gray-900"
+            >
+              {item.name}
+            </a>
+          ))
+        }
 
-				{/* Company Links */}
-				{navigation.company.map((item) => (
-					<a
-						href={item.href}
-						class="text-sm text-gray-600 hover:text-gray-900"
-					>
-						{item.name}
-					</a>
-				))}
+        {/* Company Links */}
+        {
+          navigation.company.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm text-gray-600 hover:text-gray-900"
+            >
+              {item.name}
+            </a>
+          ))
+        }
 
-				{/* Auth Buttons */}
-				<a
-					href="/login"
-					class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
-				>
-					Sign in
-				</a>
-				<a
-					href="/register"
-					class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-				>
-					Get Started
-				</a>
-			</div>
+        {/* Auth Buttons */}
+        <a
+          href="/login"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+        >
+          Sign in
+        </a>
+        <a
+          href="/register"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+        >
+          Get Started
+        </a>
+      </div>
 
-			{/* Mobile menu button - Note: We'll need client-side JS for the mobile menu */}
-			<div class="flex md:hidden">
-				<button
-					type="button"
-					class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-					id="mobile-menu-button"
-				>
-					<span class="sr-only">Open main menu</span>
-					<svg
-						class="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-						/>
-					</svg>
-				</button>
-			</div>
-		</div>
-	</div>
+      {
+        /* Mobile menu button - Note: We'll need client-side JS for the mobile menu */
+      }
+      <div class="flex md:hidden">
+        <button
+          type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          id="mobile-menu-button"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <script>
-	// Mobile menu functionality
-	const button = document.querySelector('#mobile-menu-button');
-	const menu = document.querySelector('#mobile-menu');
-	
-	if (button) {
-		button.addEventListener('click', () => {
-			const expanded = button.getAttribute('aria-expanded') === 'true';
-			button.setAttribute('aria-expanded', (!expanded).toString());
-			menu?.classList.toggle('hidden');
-		});
-	}
+  // Mobile menu functionality
+  const button = document.querySelector("#mobile-menu-button");
+  const menu = document.querySelector("#mobile-menu");
+
+  if (button) {
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", (!expanded).toString());
+      menu?.classList.toggle("hidden");
+    });
+  }
 </script>
 
 <style>
-	/* Add any additional styles here */
+  /* Add any additional styles here */
 </style>
