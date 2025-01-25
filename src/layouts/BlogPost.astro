@@ -1,0 +1,91 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body class="min-h-screen bg-background antialiased">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-primary-100 via-white to-secondary-400"
+    >
+    </div>
+    <div
+      class="absolute inset-0"
+      style="background-image: linear-gradient(to bottom, 
+						rgba(255, 255, 255, 0) 0%,
+						rgba(255, 255, 255, 0.9) 70%,
+						rgba(255, 255, 255, 1) 100%
+					),
+					linear-gradient(rgb(0 0 0 / 0.05) 1px, transparent 1px), 
+					linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px);
+					background-size: auto, 64px 64px, 64px 64px"
+    >
+    </div>
+    <Header />
+    <main>
+      <div class="relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="py-24 sm:py-32">
+            <div class="text-center">
+              <div class="text-muted-foreground">
+                <FormattedDate date={pubDate} />
+                {
+                  updatedDate && (
+                    <div class="italic mt-1">
+                      Last updated on <FormattedDate date={updatedDate} />
+                    </div>
+                  )
+                }
+              </div>
+              <h1
+                class="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+              >
+                {title}
+              </h1>
+              {
+                description && (
+                  <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+                    {description}
+                  </p>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <article class="prose lg:prose-xl mx-auto">
+          {
+            heroImage && (
+              <div class="relative w-full h-[510px] mb-20 rounded-lg overflow-hidden">
+                <img
+                  src={heroImage}
+                  alt=""
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )
+          }
+          <div
+            class="prose-headings:text-gray-900 prose-headings:font-bold prose-h1:text-4xl prose-h1:mt-24 prose-h1:mb-12 prose-h2:text-3xl prose-h2:mt-20 prose-h2:mb-8 prose-h3:text-2xl prose-h3:mt-16 prose-h3:mb-6 prose-p:text-gray-600 prose-p:leading-relaxed prose-p:mb-8 prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-gray-900 prose-code:text-primary-600 prose-code:bg-primary-50 prose-code:rounded-md prose-code:px-1 prose-code:py-0.5 prose-pre:bg-gray-900 prose-pre:text-gray-50 prose-ol:text-gray-600 prose-ul:text-gray-600 prose-li:my-3 prose-ul:my-8 prose-ol:my-8"
+          >
+            <slot />
+          </div>
+        </article>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
