@@ -7,8 +7,15 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  site: "https://happypanda.ai",
-  integrations: [sitemap()],
+  site: "https://happypanda.ai/blog",
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes("/blog/404"),
+      changefreq: "weekly",
+      lastmod: new Date(),
+      priority: 0.7,
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
