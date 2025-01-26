@@ -178,7 +178,7 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground antialiased;
 	}
 }
 
@@ -201,6 +201,7 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 }
+article {
 h1,
 h2,
 h3,
@@ -229,6 +230,7 @@ h4 {
 h5 {
 	font-size: 1.25em;
 	margin: 1.5rem 0 1.5rem 0;
+}
 }
 strong,
 b {
@@ -299,12 +301,8 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }

@@ -69,7 +69,7 @@ const posts = (await getCollection("blog")).sort(
               {posts[0] && (
                 <a
                   href={`/blog/${posts[0].id}/`}
-                  class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.01] overflow-hidden"
                 >
                   <div class="grid md:grid-cols-2 gap-8">
                     <div class="aspect-16/9 relative bg-gray-100 md:aspect-auto md:h-full">
@@ -103,11 +103,11 @@ const posts = (await getCollection("blog")).sort(
                       <p class="text-sm text-muted-foreground">
                         <FormattedDate date={posts[0].data.pubDate} />
                       </p>
-                      <h2 class="mt-4 text-2xl font-bold text-gray-900">
+                      <h2 class="mt-4 text-2xl font-bold text-gray-900 line-clamp-2 min-h-[4rem]">
                         {posts[0].data.title}
                       </h2>
                       {posts[0].data.description && (
-                        <p class="mt-4 text-gray-600 line-clamp-3">
+                        <p class="mt-4 text-gray-600 line-clamp-3 min-h-[4.5rem]">
                           {posts[0].data.description}
                         </p>
                       )}
@@ -169,15 +169,15 @@ const posts = (await getCollection("blog")).sort(
                           </div>
                         )}
                       </div>
-                      <div class="p-6">
+                      <div class="p-6 flex flex-col flex-1">
                         <p class="text-sm text-muted-foreground">
                           <FormattedDate date={post.data.pubDate} />
                         </p>
-                        <h2 class="mt-2 text-xl font-semibold text-gray-900">
+                        <h2 class="mt-2 text-xl font-semibold text-gray-900 line-clamp-2 min-h-[3.5rem]">
                           {post.data.title}
                         </h2>
                         {post.data.description && (
-                          <p class="mt-2 text-gray-600 line-clamp-2">
+                          <p class="mt-2 text-gray-600 line-clamp-2 min-h-[3rem]">
                             {post.data.description}
                           </p>
                         )}
