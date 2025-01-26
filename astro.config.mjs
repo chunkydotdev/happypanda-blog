@@ -13,5 +13,4 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   adapter: vercel({}),
-  base: "/blog", // This ensures assets are loaded correctly
 });
