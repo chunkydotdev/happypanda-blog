@@ -6,77 +6,73 @@ pubDate: '2025-01-28'
 
 ## Introducing: Your Button, Your Rules – The New Widget Toggle Feature
 
-What’s better than having a sleek feedback widget on your site? Having total control over how it opens. That’s right, HappyPanda just got even more flexible—we’ve introduced the option for you to hide our widget toggle and use your own custom buttons (or icons, or whatever you fancy) to open the feedback box. If this doesn’t scream customization, I don’t know what does.
+What’s better than a sleek feedback widget on your site? A widget that’s fully under your control. That’s right, HappyPanda just leveled up with a new feature that lets you hide our default widget toggle and use your very own custom button (or link, or image) to open the feedback box. It’s the flexibility you’ve been asking for—all wrapped in one simple JavaScript function.
 
-### The Story Behind This Feature
+### The Inspiration Behind This Feature
 
-Picture this: You’ve spent hours (days?) making your website look absolutely stunning. Everything is *just so*. But then, a little toggle button pops up, looking all widget-y. Functional? Yes. Stylish? Questionable. Now, don’t get me wrong, we love our widget toggle. It’s neat, helpful, and lets users know they can leave feedback. But we’ve heard your requests, and some of you wanted more—more control, more options, more ways to make the widget blend seamlessly into your designs.
+Imagine this: you’ve poured your heart and soul into crafting a stunning website. Every pixel is perfect. But then, a default toggle button appears—it’s functional, sure, but does it vibe with your design? Probably not. We’ve heard your feedback, and we totally get it. You want more control over how and where the widget fits in your site’s aesthetic.
 
-So, we rolled up our sleeves and added a feature that’s as versatile as your imagination. Enter: **`HappyPandaWidget.open()`**.
+That’s why we’re introducing **`HappyPandaWidget.open()`**: a small but mighty function that lets you take charge of how users access the feedback box. No more one-size-fits-all toggle—this feature bends to your will.
 
-### What Does This Mean for You?
+### What’s in It for You?
 
-In simple terms: The power is now in your hands (and your code).
+In short: absolute control. Here’s what you can do with this feature:
 
-Instead of relying on our built-in toggle button to open the feedback widget, you can now:
+- **Hide the Default Toggle:** If it doesn’t fit your style, you can hide it directly through the HappyPanda admin dashboard.
+- **Add Custom Triggers:** Use your own button, link, or image to open the feedback box.
+- **Seamlessly Blend with Your Design:** Match the trigger to your brand’s look and feel.
+- **Enjoy Smart Behavior Updates:** With the latest improvements, your widget is smarter and smoother than ever. Custom trigger elements marked with `data-happypanda-trigger` will:
+  - Prevent the widget from closing when clicked.
+  - Allow intuitive behavior like closing the widget when clicking outside of it, pressing Escape, or calling the `close()` method explicitly.
 
-- Hide the default toggle entirely.
-- Use your own button, link, or even an image to trigger the feedback box.
-- Match the trigger perfectly with your site’s design, style, or quirky personality.
+### How to Set It Up
 
-All it takes is one JavaScript function. Just call `HappyPandaWidget.open()` when your custom trigger is clicked, and ta-da! The feedback box appears, ready to collect insights.
-
-### How to Use It
-
-Here’s how easy it is to get started:
+Getting started is a breeze. Here’s how:
 
 1. **Hide the Default Toggle:**
-   In your widget configuration, simply set `hideToggle: true` when initializing:
-   ```javascript
-   HappyPandaWidget.init({
-       projectId: 'YOUR_PROJECT_ID',
-       hideToggle: true
-   });
-   ```
+   Log into your HappyPanda admin dashboard, go to your widget’s settings, and toggle the option to hide the default button. Save your changes—done!
 
-2. **Create Your Custom Button:**
-   Add a button (or link, or whatever you’d like) to your site:
+2. **Create Your Own Button:**
+   Add an element to your site—it could be a button, a link, or even an image:
    ```html
-   <button id="openFeedback">Give Feedback</button>
+   <button id="openFeedback" data-happypanda-trigger>Give Feedback</button>
    ```
 
-3. **Call the Magic Function:**
-   Use JavaScript to trigger the widget when your custom button is clicked:
+3. **Trigger the Widget:**
+   Use JavaScript to link your custom button to the feedback box:
    ```javascript
    document.getElementById('openFeedback').addEventListener('click', () => {
        HappyPandaWidget.open();
    });
    ```
 
-And just like that, your feedback widget is completely under your command.
+And that’s it! You now have a fully customized way to collect user feedback.
 
-### Why This Feature Matters
+### What’s New in the Widget’s Behavior?
 
-Here’s the thing: Design matters. Your website isn’t just a collection of pages; it’s an experience. We get it. You’ve worked hard to craft an interface that represents your brand, your style, your vibe. The last thing you need is a toggle button that feels out of place. This feature ensures that the HappyPanda widget doesn’t just work for you—it works *with* you.
+We’ve introduced some nifty updates to make the widget even smarter and more user-friendly:
 
-### A Few Ideas to Get You Started
+- **Click Outside Behavior:** The widget now properly detects clicks inside and outside itself, ensuring it only closes when appropriate.
+- **Trigger Attribute:** Elements marked with `data-happypanda-trigger` prevent the widget from closing when clicked, perfect for your custom open buttons.
 
-Need inspiration? Here are a few creative ways to use this new feature:
+### Why This Feature is a Game-Changer
 
-- **A Floating Feedback Icon:** Design your own floating icon or button that matches your site’s theme.
-- **Contextual Triggers:** Add a “Leave Feedback” link directly within your app’s help menu or footer.
-- **Seasonal Flair:** Use festive designs (think holiday icons!) to make your feedback button more engaging.
+Your website isn’t just a platform; it’s a reflection of your brand. Every design choice matters, and now you don’t have to compromise on aesthetics to get great feedback. With this new feature, the widget becomes an invisible ally—ready to work behind the scenes while keeping your design spotless.
 
-### Ready to Customize?
+### A Few Ideas to Spark Your Creativity
 
-If you’ve been waiting for the chance to tailor every corner of your site, this feature is for you. It’s small, it’s simple, and it gives you the freedom to make the widget feel *yours*.
+Looking for inspiration? Here are some cool ways you can use this feature:
 
-As always, we’re here to help if you need a hand implementing this. Have fun customizing, and let us know what cool ideas you come up with. We’re always amazed by how creative our users are.
+- **Floating Icon:** Add a custom floating button that perfectly matches your theme.
+- **Context-Specific Feedback:** Place a “Give Feedback” link inside your app’s help menu or footer.
+- **Seasonal Themes:** Update your feedback trigger to match holidays or special events.
 
-Ready to give it a try? If you’re not already using HappyPanda, [sign up today](/register) and see how easy it is to collect and act on feedback, all while keeping your site’s design flawless.
+### Ready to Try It Out?
 
-Happy coding (and feedback collecting)!
+We’re excited to see what you’ll create with this new flexibility. If you’re not already using HappyPanda, now’s the perfect time to join the family. [Sign up today](#) and experience how easy (and stylish) feedback collection can be.
 
-Cheers,  
+Need help setting it up? Our team is just a message away. Have fun experimenting, and don’t forget to share your creative implementations with us—we love seeing what you come up with!
+
+Happy customizing,  
 The HappyPanda Team
 
