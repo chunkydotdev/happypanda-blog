@@ -73,18 +73,11 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<script src="https://feedback.happypanda.ai/happypanda.js"></script>
-<script>
-  document
-    .querySelector('script[src*="happypanda.js"]')
-    .addEventListener("load", function () {
-      HappyPandaWidget.init({
-        projectId: "67895db47be9d598b88e4cbb",
-        token:
-          "90470cd00473470b275f84f2ad551a46652b37563ad9274defe850334abd723b",
-      });
-    });
-</script>
+<script
+  src="https://feedback.happypanda.ai/happypanda.js"
+  data-project-id="67895db47be9d598b88e4cbb"
+  data-token="90470cd00473470b275f84f2ad551a46652b37563ad9274defe850334abd723b"
+></script>
 
 <script
   defer
