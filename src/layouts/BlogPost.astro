@@ -74,7 +74,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
               <div class="relative w-full h-[510px] mb-20 rounded-lg overflow-hidden">
                 <img
                   src={heroImage}
-                  alt=""
+                  alt={`Hero image for article: ${title}`}
                   class="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
