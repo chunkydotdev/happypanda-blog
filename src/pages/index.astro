@@ -69,6 +69,7 @@ const posts = (await getCollection("blog")).sort(
               {posts[0] && (
                 <a
                   href={`/blog/${posts[0].id}/`}
+                  rel="canonical"
                   class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.01] overflow-hidden"
                 >
                   <div class="grid md:grid-cols-2 gap-8">
@@ -140,6 +141,7 @@ const posts = (await getCollection("blog")).sort(
                   {posts.slice(1).map((post) => (
                     <a
                       href={`/blog/${post.id}/`}
+                      rel="canonical"
                       class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                     >
                       <div class="aspect-16/9 relative bg-gray-100">
