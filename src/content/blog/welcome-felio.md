@@ -5,8 +5,6 @@ pubDate: '2025-02-03'
 heroImage: '/blog/felio-hero.png'
 ---
 
-# Felio Joins the Party—Now Powered by HappyPanda.ai!
-
 Hello, digital trailblazers! Today, we're absolutely thrilled to welcome Felio to our platform—a move that's about as refreshing as a cool breeze on a hot summer day (or a well-timed quip from Ricky Gervais). But wait, there's more: Felio isn’t coming alone. They’ve brought along their brilliant new sidekick, HappyPanda.ai, to turn the mundane into the magnificent.
 
 ## So, Who's Felio?
