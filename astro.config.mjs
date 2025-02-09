@@ -7,10 +7,25 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  site: "https://happypanda.ai/blog",
+  site: "https://happypanda.ai",
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/blog/404"),
+      filter: (page) => {
+        // Filter out 404 page
+        if (page.includes("/404")) return false;
+
+        // Remove trailing slashes
+        if (page.endsWith("/") && page !== "https://happypanda.ai/blog/") {
+          return false;
+        }
+
+        // Ensure we don't have duplicate root pages
+        if (page === "https://happypanda.ai/blog" && page.endsWith("/blog")) {
+          return false;
+        }
+
+        return true;
+      },
       changefreq: "weekly",
       lastmod: new Date(),
       priority: 0.7,
@@ -21,4 +36,5 @@ export default defineConfig({
   },
   adapter: vercel({}),
   base: "/blog",
+  trailingSlash: "never",
 });
