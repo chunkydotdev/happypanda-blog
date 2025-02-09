@@ -34,7 +34,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  adapter: vercel({}),
+  adapter: vercel({
+    imageService: true,
+  }),
   base: "/blog",
   trailingSlash: "never",
 });
