@@ -140,7 +140,7 @@ const posts = (await getCollection("blog")).sort(
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {posts.slice(1).map((post) => (
                     <a
-                      href={`/blog/${post.id}/`}
+                      href={`/blog/${post.id}`}
                       rel="canonical"
                       class="group block bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                     >
