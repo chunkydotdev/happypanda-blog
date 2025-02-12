@@ -2,7 +2,7 @@
 title: 'Introducing: Your Button, Your Rules – The New Widget Toggle Feature'
 description: 'HappyPanda just got more flexible! Learn how our latest feature lets you hide the default widget toggle and use your own custom buttons, links, or icons to open the feedback box. Perfect for seamless design and ultimate customization.'
 pubDate: '2025-01-28'
-heroImage: '../images/widget-toggle-hero.png'
+heroImage: '../../images/widget-toggle-hero.png'
 ---
 
 ## Introducing: Your Button, Your Rules – The New Widget Toggle Feature

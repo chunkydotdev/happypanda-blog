@@ -2,7 +2,7 @@
 title: 'LinkBun.io Joins HappyPanda – And We’re Absolutely Chuffed About It!'
 description: 'LinkBun.io is revolutionizing link sharing, and they’ve joined HappyPanda! Learn how they use AI-powered feedback to improve user experience and stay connected to their users.'
 pubDate: '2025-01-29'
-heroImage: '../images/linkbun-welcome.png'
+heroImage: '../../images/linkbun-welcome.png'
 ---
 
 ## LinkBun.io Joins HappyPanda – And We’re Absolutely Chuffed About It!
