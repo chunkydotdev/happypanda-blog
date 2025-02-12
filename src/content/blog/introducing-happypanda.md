@@ -2,7 +2,7 @@
 title: 'Say Hello to HappyPanda: Feedback Made Effortless'
 description: 'Introducing HappyPanda - the AI-powered feedback management platform that makes collecting and analyzing user feedback delightful. Learn how we are transforming feedback chaos into actionable insights for indie hackers, startups, and SaaS teams.'
 pubDate: '2025-01-25'
-heroImage: '../../images/launch-hero.png'
+heroImage: '/launch-hero.png'
 ---
 
 The wait is over! **HappyPanda** is here, ready to make user feedback collection not just manageable but downright delightful. Whether you're coding your first side project, scaling your SaaS dream, or simply curious about what your users think, HappyPanda is the perfect sidekick.
