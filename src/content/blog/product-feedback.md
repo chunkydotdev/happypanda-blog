@@ -2,7 +2,7 @@
 title: 'The Ultimate Guide to Gathering Product Feedback with a User-Friendly Widget'
 description: 'Discover how small business founders can seamlessly integrate a feedback widget into their service to collect actionable product feedback and drive product improvements. Learn how to harness 5-star ratings, customer comments, screenshots, and more!'
 pubDate: '2025-02-08'
-heroImage: '../../images/product-feedback-widget-hero.png'
+heroImage: '/blog/product-feedback-widget-hero.png'
 ---
 
 # The Ultimate Guide to Gathering Product Feedback with a User-Friendly Widget
