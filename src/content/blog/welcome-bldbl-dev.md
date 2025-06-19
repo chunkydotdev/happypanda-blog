@@ -3,7 +3,7 @@
 title: "All Aboard the Feedback Express, bldbl.dev! 🐼🚀"
 description: "Celebrate bldbl.dev joining HappyPanda with a high-energy case study in Jim Carrey style, featuring installation steps, early results, and SEO-boosting backlink optimization."
 pubDate: "2025-06-19"
-heroImage: "/images/bldbl-welcome.png"
+heroImage: "/blog/bldbl-welcome.png"
 ----------------------------------------------------
 
 ## All Aboard the Feedback Express, bldbl.dev! 🐼🚀
